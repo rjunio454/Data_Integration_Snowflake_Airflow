@@ -42,10 +42,6 @@ Este guia descreve os passos necessários para realizar a configuração inicial
 
 ---
 
-Claro! Aqui está a descrição aprimorada para o **Passo 5** do seu README, explicando como criar a tabela `COFFEE` no schema `RAW` via interface gráfica do Snowflake.
-
----
-
 ### **Passo 5: Criar a Tabela COFFEE**
 
 Neste passo, vamos criar a tabela `COFFEE` no schema `RAW` para armazenar os dados brutos da cafeteria. Para isso, siga os passos abaixo utilizando a interface gráfica do Snowflake.
