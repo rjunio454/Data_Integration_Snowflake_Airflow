@@ -42,25 +42,39 @@ Este guia descreve os passos necessários para realizar a configuração inicial
 
 ---
 
-### **Passo 5: Criar a tabela COFFEE**
-1. No schema `RAW`, crie a tabela `COFFEE`, que irá armazenar os dados brutos da cafeteria. Certifique-se de configurar os campos corretamente (incluindo o formato de data e tipos de dados). Exemplo de criação:
-
-   ```sql
-   CREATE TABLE RAW.COFFEE (
-       SALE_ID INTEGER,
-       PRODUCT_NAME STRING,
-       STORE_NAME STRING,
-       SALE_DATE DATE,
-       SALE_AMOUNT DECIMAL(10, 2)
-   );
-   ```
-
-2. Ajuste o esquema da tabela com base no formato do arquivo carregado.
+Claro! Aqui está a descrição aprimorada para o **Passo 5** do seu README, explicando como criar a tabela `COFFEE` no schema `RAW` via interface gráfica do Snowflake.
 
 ---
 
-### **Dicas Importantes**
-- Sempre verifique o formato do arquivo (CSV, JSON, etc.) e configure os tipos de dados adequadamente.
-- Utilize comandos como `LIST @RAW.STG_RAW` para verificar se o arquivo foi carregado corretamente na stage.
+### **Passo 5: Criar a Tabela COFFEE**
+
+Neste passo, vamos criar a tabela `COFFEE` no schema `RAW` para armazenar os dados brutos da cafeteria. Para isso, siga os passos abaixo utilizando a interface gráfica do Snowflake.
+
+#### 1. **Criar a Tabela a partir de um Arquivo**
+   - Acesse o **Snowflake Web UI**.
+   - No painel lateral esquerdo, escolha o **Database** `IMPACTA`.
+   - Selecione o **Schema** `RAW`, onde a tabela será criada.
+   - Clique em **Create** no canto superior direito e selecione **Table** > **From File**.
+   
+   Isso permitirá que você crie a tabela diretamente a partir de um arquivo carregado previamente (como um arquivo CSV ou outro tipo de arquivo de dados). A interface gráfica tentará automaticamente mapear as colunas e os tipos de dados com base no conteúdo do arquivo.
+
+#### 2. **Ajustar o Esquema da Tabela**
+   Após carregar o arquivo para a tabela `COFFEE`, você precisará ajustar o esquema para garantir que todos os tipos de dados estejam corretos. Isso pode incluir:
+   - **Formato de Data**: Se o arquivo contém campos de data, verifique se o formato está correto (por exemplo, `YYYY-MM-DD`). Ajuste o tipo de dado da coluna para `DATE` ou outro tipo adequado.
+   - **Tipos de Dados**: Verifique se todos os campos possuem os tipos de dados corretos, como `VARCHAR`, `NUMBER`, etc. Caso necessário, altere o tipo de dado diretamente na interface gráfica.
+   
+   
+   Para ajustar o esquema:
+   - Clique em **Table** no painel esquerdo, selecione a tabela `COFFEE` e edite as colunas conforme necessário.
+   - Se o tipo de dados da coluna precisar ser alterado, clique no nome da coluna e modifique o tipo de dados.
+
+#### 3. **Salvar as Alterações**
+   Após ajustar o esquema da tabela para garantir que os tipos de dados estejam corretos, clique em **Save** para confirmar as mudanças.
+
+---
+
+Agora a tabela `COFFEE` estará pronta para armazenar os dados brutos da cafeteria no schema `RAW` e pronta para ser usada no processo de carga de dados.
+
+---
 
 Continua...
